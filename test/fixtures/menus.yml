@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: 
+  descrition: 
+  user_id: 
+  valid_date: 2015-06-16
+
+two:
+  name: 
+  descrition: 
+  user_id: 
+  valid_date: 2015-06-16

@@ -1,0 +1,20 @@
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th data-field="email">Email</th>
+            <th data-field="email">Menus</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% unless @chefs.blank? %>
+        <% @chefs.each do |c| %>
+          <tr>
+            <td><%= c.email %></td>
+            <td><%= link_to "View Chef's Menu", c %></td>
+          </tr>
+        <% end %>
+      <% else %>
+        No Chefs
+      <% end %>
+    </tbody>
+</table>
