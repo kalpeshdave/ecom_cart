@@ -10,7 +10,7 @@
         <% @chefs.each do |c| %>
           <tr>
             <td><%= c.email %></td>
-            <td><%= link_to "View Chef's Menu", c %></td>
+            <td><%= link_to "View Chef's Menu", chef_menus_url(c) %></td>
           </tr>
         <% end %>
       <% else %>

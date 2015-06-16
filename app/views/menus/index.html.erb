@@ -1,3 +1,5 @@
+<p><%= link_to "New Menu", new_chef_menu_url %></p>
+
 <table class="table table-condensed">
     <thead>
         <tr>
@@ -10,7 +12,7 @@
         <% @menus.each do |menu| %>
           <tr>
             <td><%= menu.name %></td>
-            <td><%= menu.description %></td>
+            <td><%= menu.descrition %></td>
           </tr>
         <% end %>
       <% else %>

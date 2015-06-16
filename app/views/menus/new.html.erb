@@ -1,0 +1,14 @@
+<%= form_for [current_user, @menu] do |f| %>
+<% @menu.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+<p>
+  Name : <%= f.text_field :name %>
+</p>
+<p>
+  Descriptio : <%= f.text_area :descrition %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

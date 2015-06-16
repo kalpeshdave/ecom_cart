@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     when 'Customer'
       chefs_url
     when 'Chef'
-      menus_url
+      chef_menus_url
     else
       root_url
     end if user_signed_in?

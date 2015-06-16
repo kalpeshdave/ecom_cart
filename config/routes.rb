@@ -3,18 +3,11 @@ Sample::Application.routes.draw do
   get "home/index"
 
   devise_for :users, :customers, :chefs
-
-  authenticate :customer do
-    resources :chefs, only: [:index, :show] do
-      resources :menus, only: [:index, :show]
-    end
-    resources :carts, only: [:show]
-  end
-
-  authenticate :chef do
+  resources :chefs, only: [:index, :show] do
     resources :menus
   end
-
+  resources :carts, only: [:show]
+  resources :menus, only: [:index, :show]
   resources :items
 
   root to: 'home#index'

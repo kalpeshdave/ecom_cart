@@ -10,9 +10,9 @@ class MenusController < ApplicationController
   end
 
   def create
-    @menu = Menu.new(params[:menu].merge(:user => current_user))
+    @menu = Menu.new(params[:menu].merge!(:user => current_user))
     if @menu.save
-      redirect_to menus_url, notice: "Menu Cerated"
+      redirect_to chef_menu_url(current_user, @menu), notice: "Menu Cerated"
     else
       render :new
     end

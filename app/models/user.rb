@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :menus
   has_many :items
+  has_many :orders
 
   def chef?
     type == 'Chef'
